@@ -9,5 +9,9 @@
 - See [Leaflet](https://leafletjs.com/) for map display?
 
 ## Progress
-- [ ] [Figma prototype]()
-- [ ] ???
+- [x] [Figma prototype](https://www.figma.com/file/ce9poFVz0soctapy1ndcsI/People-in-Space-Jam?node-id=0%3A1)
+- [x] Page/canvas setup
+- [ ] Remake central graphic
+- [x] Person objects
+- [ ] Displaying Person objects in a circle around center
+- [ ] Create own JSON with Wikipedia snippets on known astros and craft (would be neater to get it from some other API, but meh)

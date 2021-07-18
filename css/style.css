@@ -1,0 +1,30 @@
+body {
+    background-color: black;
+    background-image: url('../assets/bg_stars.gif');
+    text-align: center;
+}
+
+#displayWindow {
+    margin-top: 10vh;
+}
+
+#displayWindow canvas {
+    border: 1px solid #00FFFF;
+}
+
+a {
+    text-decoration: none;
+    font-size: x-large;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#astroInfo {
+    color: #FF0000;
+}
+
+#craftInfo {
+    color: #FFFF00;
+}
