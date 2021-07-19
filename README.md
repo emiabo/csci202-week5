@@ -6,12 +6,12 @@
 - [Old Space Jam website??](https://www.spacejam.com/1996/)
 - Separate display of people on ISS and people on other craft.
 - Maybe integrate [ISS location](http://open-notify.org/Open-Notify-API/ISS-Location-Now/) in some way
-- See [Leaflet](https://leafletjs.com/) for map display?
 
 ## Progress
 - [x] [Figma prototype](https://www.figma.com/file/ce9poFVz0soctapy1ndcsI/People-in-Space-Jam?node-id=0%3A1)
-- [x] Page/canvas setup
-- [ ] Remake central graphic
-- [x] Person objects
-- [ ] Displaying Person objects in a circle around center
-- [ ] Create own JSON with Wikipedia snippets on known astros and craft (would be neater to get it from some other API, but meh)
+- [ ] Remake logo
+- [ ] More effects on icons
+- [ ] Logo hover effects using ISS coordinate data
+- [ ] Squish text effect? - look into textAscent() and textDescent()
+- [ ] Limit width of info links
+- [ ] Sound effects? - come on and slam

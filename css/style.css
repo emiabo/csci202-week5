@@ -8,10 +8,6 @@ body {
     margin-top: 10vh;
 }
 
-#displayWindow canvas {
-    border: 1px solid #00FFFF;
-}
-
 a {
     text-decoration: none;
     font-size: x-large;
@@ -21,10 +17,10 @@ a:hover {
     text-decoration: underline;
 }
 
-#astroInfo {
+#astroInfo a{
     color: #FF0000;
 }
 
-#craftInfo {
+#craftInfo a{
     color: #FFFF00;
 }
