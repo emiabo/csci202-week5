@@ -11,7 +11,7 @@ var hoverDistance = 0;
 var infoField;
 var craftInfoField;
 function preload() {
-    logo = loadImage('assets/spacestation.png');
+    logo = loadImage('assets/logo.png');
     font = loadFont('assets/OpenSansCondensed-Bold.ttf');
     iconSet = [loadImage('assets/planet1.png'), 
                 loadImage('assets/planet2.png'), loadImage('assets/planet3.png'), loadImage('assets/planet4.png'), loadImage('assets/planet5.png'), loadImage('assets/planet6.png'), loadImage('assets/planet7.png'), loadImage('assets/planet8.png'),
@@ -37,17 +37,20 @@ function setup() {
     for (let i = 0; i < peopleData.number; i++) {
         people.push(new Person(i));
     }
-
 }
 
 function draw() {
     clear();
     cursor();
-    //Update ISS data every 10 seconds
-    if (frameCount % 600 === 0) {
+    //Update ISS data every 10 seconds (needs callback)
+    /*if (frameCount % 600 === 0) {
         iss = loadJSON('http://api.open-notify.org/iss-now.json');
-    }
-    //Draw center image (consider warping in some way with ISS coordinate data)
+        console.log('Updated ISS data.');
+        console.log(iss.timestamp);
+        console.log(iss.iss_position.latitude);
+        console.log(iss.iss_position.longitude);
+    }*/
+    //Draw center image
     drawLogo();
 
     //Draw people, with names above and craft below (on hover)
@@ -154,9 +157,19 @@ function drawPerson(i) {
 
 function drawLogo() {
     if (dist(mouseX, mouseY, 250, 250) < 100) {
-        //TODO create several randomized effects that take iss data as parameters
-        
+        //Effect that takes iss data as parameters
+        push();
+        translate(250, 250);
+        rotate(iss.timestamp);
+        tint((iss.timestamp % 255), round(abs(iss.iss_position.latitude)), round(abs(iss.iss_position.longitude)))
+        image(logo, 0, 0);
+        pop();
     } else {
         image(logo, 250, 250);
     }
 }
+/*ISS values:
+iss.timestamp = int with value >1626807284, increases every second
+iss.iss_position.latitude = 4 decimal float (possibly string) with value -90 to 90
+iss.iss_position.longitude = 4 decimal float (possibly string) with value -180 to 180
+*/

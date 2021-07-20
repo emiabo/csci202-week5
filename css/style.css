@@ -13,14 +13,52 @@ a {
     font-size: x-large;
 }
 
+@keyframes flash-astro {
+    from {color: white;}
+    to {color: #FF0000};
+}
+
+@keyframes flash-craft {
+    from {color: white;}
+    to {color: #FFFF00};
+}
+
 a:hover {
     text-decoration: underline;
 }
 
 #astroInfo a{
     color: #FF0000;
+    animation-name: flash-astro;
+    animation-duration: 1s;
 }
 
 #craftInfo a{
     color: #FFFF00;
+    animation-name: flash-craft;
+    animation-duration: 1s;
+}
+
+p {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#showAbout {
+    text-decoration: underline;
+    color: rgb(255, 76, 76);
+    font-size: smaller;
+}
+
+#about {
+    display: none;
+}
+
+#about, #about a{
+    color: greenyellow;
+    font-size: medium;
+}
+
+#about a {
+    text-decoration: underline;
 }
