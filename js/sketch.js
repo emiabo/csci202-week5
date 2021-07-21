@@ -16,8 +16,8 @@ function preload() {
     iconSet = [loadImage('assets/planet1.png'), 
                 loadImage('assets/planet2.png'), loadImage('assets/planet3.png'), loadImage('assets/planet4.png'), loadImage('assets/planet5.png'), loadImage('assets/planet6.png'), loadImage('assets/planet7.png'), loadImage('assets/planet8.png'),
                 loadImage('assets/planet9.png')];
-    peopleData = loadJSON('http://api.open-notify.org/astros.json');
-    iss = loadJSON('http://api.open-notify.org/iss-now.json');
+    peopleData = loadJSON('https://api.open-notify.org/astros.json');
+    iss = loadJSON('https://api.open-notify.org/iss-now.json');
     infoField = select('#astroInfo');
     craftInfoField = select('#craftInfo');
 }
@@ -43,13 +43,16 @@ function draw() {
     clear();
     cursor();
     //Update ISS data every 10 seconds (needs callback)
-    /*if (frameCount % 600 === 0) {
-        iss = loadJSON('http://api.open-notify.org/iss-now.json');
+    if (frameCount % 600 === 0) {
+        iss = loadJSON('http://api.open-notify.org/iss-now.json', drawLogo);
         console.log('Updated ISS data.');
         console.log(iss.timestamp);
         console.log(iss.iss_position.latitude);
         console.log(iss.iss_position.longitude);
-    }*/
+    } else {
+        drawLogo();
+    }
+
     //Draw center image
     drawLogo();
 

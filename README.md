@@ -9,7 +9,7 @@ This is an homage to the the [delightfully gaudy 1996 webpage for the Warner Bro
 - [ ] More effects on icons
 - [ ] More logo hover effects using ISS coordinate data
 - [ ] Sound effects? - come on and slam
-- [ ] Callback to update ISS data in real time
+- [x] Callback to update ISS data in real time
 - [ ] Squish text effect? - look into textAscent() and textDescent()
 - [ ] Make more accessible - p5 canvases are not exactly screen-readable
 - [ ] Get person and spacecraft info from the web (currently the data is hard-coded)
